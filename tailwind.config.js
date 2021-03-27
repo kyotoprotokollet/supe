@@ -1,15 +1,18 @@
 module.exports = {
     purge: {
-      content: [
-        './resources/**/*.antlers.html',
-        './resources/**/*.blade.php',
-        './content/**/*.md'
-      ]
+        content: [
+            "./resources/**/*.antlers.html",
+            "./resources/**/*.blade.php",
+            "./content/**/*.md"
+        ]
     },
-    important: true,
+    important: false,
     theme: {
-      extend: {},
+        extend: {},
+        fontFamily: {
+            serif: ["Lora", "Georgia", "sans-serif"]
+        }
     },
     variants: {},
-    plugins: [],
-  }
+    plugins: []
+};
