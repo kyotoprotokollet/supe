@@ -1,0 +1,28 @@
+title: Ingredienslista
+fields:
+  -
+    handle: ingredients_list
+    field:
+      collapse: true
+      sets:
+        ingredient_item:
+          display: 'Ingrediens'
+          fields:
+            -
+              import: ingredients
+        ingredient_headline:
+          display: Rubrik
+          fields:
+            -
+              handle: ingredient_headline
+              field:
+                input_type: text
+                antlers: false
+                display: Rubrik
+                type: text
+                icon: text
+                listable: hidden
+      display: 'Lägg till ingrediens'
+      type: replicator
+      icon: replicator
+      listable: hidden

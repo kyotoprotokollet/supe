@@ -1,0 +1,30 @@
+<div class="px-4 max-w-6xl mx-auto">
+    <article class="mx-auto md:max-w-xl">
+        <header>
+            <h1 class="mb-8 text-center font-medium text-2xl md:text-5xl leading-tight">
+                {{ title }}
+            </h1>
+
+            {{ if updated_at }}
+                <div class="text-center">
+                    Senast uppdaterad <time datetime="{{ updated_at }}">{{ updated_at }}</time> av {{ author:role }}
+                </div>
+            {{ /if }}
+        </header>
+
+        <div class="my-12">
+            {{ ingredients_list }}
+
+                {{ if type == "ingredient_headline" }}
+                    {{ ingredient_headline }}
+                {{ elseif type == "ingredient_item" }}
+                    {{ amount }} {{ unit }} {{ ingredient }}
+                {{ /if }}
+
+            {{ /ingredients_list }}
+        </div>
+
+    </article>
+    {{ content }}
+</div>
+
