@@ -13,25 +13,14 @@
         </header>
 
         <div class="grid grid-cols-5 gap-12">
-            <div class="col-span-3 prose">
-{{ bard_field }}
-
-  {{ if type == "text" }}
-
-    <div class="text">
-      {{ text }}
-    </div>
-
-  {{ elseif type == "image" }}
-
-    <figure>
-      <img src="{{ image }}" alt="{{ caption }}" />
-      <figcaption>{{ caption }}</figcaption>
-    </figure>
-
-  {{ /if }}
-
-{{ /bard_field }}
+            <div class="col-span-3">
+                {{ bard_field }}
+                    {{ if type == "text" }}
+                        <div class="prose">
+                            {{ text }}
+                        </div>
+                    {{ /if }}
+                {{ /bard_field }}
             </div>
 
             <div class="col-span-2 p-6 rounded bg-gray-100 font-sans space-y-4">
