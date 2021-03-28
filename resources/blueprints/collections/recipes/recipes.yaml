@@ -15,11 +15,7 @@ sections:
           input_type: text
           antlers: false
       -
-        handle: content
-        field:
-          type: markdown
-          display: Content
-          localizable: true
+        import: bard
   sidebar:
     display: Sidebar
     fields:

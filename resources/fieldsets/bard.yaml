@@ -1,0 +1,35 @@
+title: Innehåll
+fields:
+  -
+    handle: bard_field
+    field:
+      always_show_set_button: false
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - anchor
+        - image
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: false
+      allow_source: false
+      enable_input_rules: false
+      enable_paste_rules: true
+      display: Innehåll
+      type: bard
+      icon: bard
+      instructions: 'Skapa ditt innehåll'
+      listable: hidden
+      sets:
+        instruction_entry:
+          display: 'Ny instruktion'
+          fields:
+            -
+              import: instructions

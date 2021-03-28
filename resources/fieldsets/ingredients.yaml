@@ -23,7 +23,7 @@ fields:
         dl: Deciliter
         l: Liter
       multiple: false
-      clearable: false
+      clearable: true
       searchable: true
       taggable: false
       push_tags: false

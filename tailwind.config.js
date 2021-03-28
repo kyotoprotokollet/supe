@@ -10,6 +10,7 @@ module.exports = {
     theme: {
         extend: {},
         fontFamily: {
+            sans: ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial"],
             serif: ["Lora", "Georgia", "sans-serif"]
         }
     },

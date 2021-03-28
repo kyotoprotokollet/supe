@@ -414,7 +414,7 @@ ul {
  */
 
 html {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -10335,6 +10335,10 @@ video {
 
 .clear-none {
   clear: none;
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial;
 }
 
 .font-serif {
@@ -31515,6 +31519,10 @@ video {
     clear: none;
   }
 
+  .sm\:font-sans {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial;
+  }
+
   .sm\:font-serif {
     font-family: Lora, Georgia, sans-serif;
   }
@@ -52626,6 +52634,10 @@ video {
 
   .md\:clear-none {
     clear: none;
+  }
+
+  .md\:font-sans {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial;
   }
 
   .md\:font-serif {
@@ -73741,6 +73753,10 @@ video {
     clear: none;
   }
 
+  .lg\:font-sans {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial;
+  }
+
   .lg\:font-serif {
     font-family: Lora, Georgia, sans-serif;
   }
@@ -94852,6 +94868,10 @@ video {
 
   .xl\:clear-none {
     clear: none;
+  }
+
+  .xl\:font-sans {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial;
   }
 
   .xl\:font-serif {

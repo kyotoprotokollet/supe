@@ -1,7 +1,7 @@
 <div class="px-4 max-w-6xl mx-auto">
-    <article class="mx-auto md:max-w-xl">
-        <header>
-            <h1 class="mb-8 text-center font-medium text-2xl md:text-5xl leading-tight">
+    <article>
+        <header class="mb-8 mx-auto md:max-w-xl">
+            <h1 class="mb-4 text-center font-medium text-2xl md:text-5xl leading-tight">
                 {{ title }}
             </h1>
 
@@ -12,19 +12,61 @@
             {{ /if }}
         </header>
 
-        <div class="my-12">
-            {{ ingredients_list }}
+        <div class="grid grid-cols-5 gap-12">
+            <div class="col-span-3 prose">
+{{ bard_field }}
 
-                {{ if type == "ingredient_headline" }}
-                    {{ ingredient_headline }}
-                {{ elseif type == "ingredient_item" }}
-                    {{ amount }} {{ unit }} {{ ingredient }}
+  {{ if type == "text" }}
+
+    <div class="text">
+      {{ text }}
+    </div>
+
+  {{ elseif type == "image" }}
+
+    <figure>
+      <img src="{{ image }}" alt="{{ caption }}" />
+      <figcaption>{{ caption }}</figcaption>
+    </figure>
+
+  {{ /if }}
+
+{{ /bard_field }}
+            </div>
+
+            <div class="col-span-2 p-6 rounded bg-gray-100 font-sans space-y-4">
+                {{ if ingredients_list }}
+                    <h3 class="text-2xl font-semibold">Ingredienser</h3>
+                    <ul class="space-y-1">
+                    {{ ingredients_list }}
+                        <li>
+                            {{ if type == "ingredient_headline" }}
+                                <h4 class="mt-4 text-lg font-semibold">
+                                    {{ ingredient_headline }}
+                                </h4>
+                            {{ elseif type == "ingredient_item" }}
+                            <div class="flex">
+                                <div class="w-24">
+                                    {{ if amount }}
+                                        <span>{{ amount }}</span>
+                                    {{ /if }}
+                                    {{ if unit }}
+                                        <span>{{ unit }} </span>
+                                    {{ /if }}
+                                </div>
+                                <div class="pl-4">
+                                    {{ ingredient }}
+                                </div>
+                            </div>
+                            {{ /if }}
+                        </li>
+                    {{ /ingredients_list }}
+                    </ul>
                 {{ /if }}
-
-            {{ /ingredients_list }}
+            </div>
         </div>
 
     </article>
-    {{ content }}
+
 </div>
 
