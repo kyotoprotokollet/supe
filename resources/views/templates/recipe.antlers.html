@@ -7,7 +7,12 @@
 
             {{ if updated_at }}
                 <div class="text-center">
-                    Senast uppdaterad <time datetime="{{ updated_at }}">{{ updated_at }}</time> av {{ author:role }}
+                    Senast uppdaterad <time datetime="{{ updated_at format="Y-m-d H:i:s.u" }}">{{ updated_at iso_format="Do MMMM YYYY" }}</time>
+                    {{ if author }}
+                        {{ relate:author }}
+                             av {{ name }}
+                        {{ /relate:author }}
+                    {{ /if }}
                 </div>
             {{ /if }}
         </header>
@@ -54,8 +59,6 @@
                 {{ /if }}
             </div>
         </div>
-
     </article>
-
 </div>
 
