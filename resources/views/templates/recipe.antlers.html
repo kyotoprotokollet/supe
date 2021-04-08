@@ -6,7 +6,7 @@
             </h1>
 
             {{ if updated_at }}
-                <div class="text-center">
+                <div class="text-center text-sm">
                     Senast uppdaterad <time datetime="{{ updated_at format="Y-m-d H:i:s.u" }}">{{ updated_at iso_format="Do MMMM YYYY" }}</time>
                     {{ if author }}
                         {{ relate:author }}
@@ -14,6 +14,10 @@
                         {{ /relate:author }}
                     {{ /if }}
                 </div>
+            {{ /if }}
+            {{ if recipe_main_image }}
+                <img src="{{ glide src="{recipe_main_image}" width="800" height="300" }}" class="my-6 rounded-lg shadow-lg">
+
             {{ /if }}
         </header>
 
