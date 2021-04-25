@@ -9,8 +9,12 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+/* mix.browserSync({
+    proxy: process.env.APP_URL,
+    notify: false
+}); */
 
-mix.js('resources/js/site.js', 'public/js')
+mix.js('resources/js/app.js', 'public/js').vue();
 
 mix.postCss('resources/css/tailwind.css', 'public/css', [
     require('postcss-import'),

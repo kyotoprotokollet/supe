@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     </head>
-    <body class="min-h-screen antialiased bg-gray-50 text-gray-700 font-serif leading-normal text-grey-800 border-t-8 border-red-500">
+    <body id="app" class="min-h-screen antialiased bg-gray-50 text-gray-700 font-serif leading-normal text-grey-800 border-t-8 border-red-500">
         <header class="px-4 mt-8 mb-16 max-w-6xl mx-auto flex items-center justify-between space-x-12">
             <div class="py-4 px-12 bg-gray-300 flex items-center justify-center rounded-lg text-xl text-gray-600 uppercase tracking-widest">Supé</div>
             <nav>
@@ -25,6 +25,6 @@
             {{ template_content }}
         </div>
 
-        <script src="{{ mix src='/js/site.js' }}"></script>
+        <script src="{{ mix src='/js/app.js' }}"></script>
     </body>
 </html>
