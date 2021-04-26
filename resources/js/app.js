@@ -1,9 +1,9 @@
 import { createApp } from "vue"
-import TestComponent from "./components/TestComponent.vue"
+import Ingredients from "./components/Ingredients.vue"
 
 const app = createApp({
     components: {
-        TestComponent
+        Ingredients
     }
 });
 
