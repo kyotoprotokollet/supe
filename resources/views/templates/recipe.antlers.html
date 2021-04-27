@@ -32,36 +32,42 @@
                 {{ /bard_field }}
             </div>
 
-            <div class="col-span-2 p-6 rounded bg-gray-100 font-sans space-y-4">
-                {{ if ingredients_list }}
-                    <ingredients :data='{{ ingredients_list | to_json | sanitize }}'></ingredients>
-                    <ul class="space-y-1">
-                    {{ ingredients_list }}
-                        <li>
-                            {{ if type == "ingredient_headline" }}
-                                <h4 class="mt-4 text-lg font-semibold">
-                                    {{ ingredient_headline }}
-                                </h4>
-                            {{ elseif type == "ingredient_item" }}
-                            <div class="flex">
-                                <div class="w-24">
-                                    {{ if amount }}
-                                        <span>{{ amount }}</span>
-                                    {{ /if }}
-                                    {{ if unit }}
-                                        <span>{{ unit }} </span>
-                                    {{ /if }}
-                                </div>
-                                <div class="pl-4">
-                                    {{ ingredient }}
-                                </div>
+            {{ if ingredients_list }}
+                <div class="col-span-2 p-6 rounded bg-gray-100 font-sans">
+                    <ingredients :ingredients='{{ ingredients_list | to_json | sanitize }}'>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Ingredienser</h3>
                             </div>
-                            {{ /if }}
-                        </li>
-                    {{ /ingredients_list }}
-                    </ul>
-                {{ /if }}
-            </div>
+                            <ul class="space-y-1">
+                            {{ ingredients_list }}
+                                <li>
+                                    {{ if type == "ingredient_headline" }}
+                                        <h4 class="mt-4 text-lg font-semibold">
+                                            {{ ingredient_headline }}
+                                        </h4>
+                                    {{ elseif type == "ingredient_item" }}
+                                    <div class="flex">
+                                        <div class="w-24">
+                                            {{ if amount }}
+                                                <span>{{ amount }}</span>
+                                            {{ /if }}
+                                            {{ if unit }}
+                                                <span>{{ unit }} </span>
+                                            {{ /if }}
+                                        </div>
+                                        <div class="pl-4">
+                                            {{ ingredient }}
+                                        </div>
+                                    </div>
+                                    {{ /if }}
+                                </li>
+                            {{ /ingredients_list }}
+                            </ul>
+                        </div>
+                    </ingredients>
+                </div>
+            {{ /if }}
         </div>
     </article>
 </div>
