@@ -20,9 +20,8 @@ mix.postCss('resources/css/tailwind.css', 'public/build/css', [
     require('postcss-preset-env')({stage: 0})
 ])
 
-if (mix.inProduction()) {
-   mix.version()
-}
+mix.version()
+
 
 /*
  |--------------------------------------------------------------------------
