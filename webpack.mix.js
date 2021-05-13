@@ -14,9 +14,9 @@ const mix = require('laravel-mix')
     notify: false
 }) */
 
-mix.js("resources/js/app.js", "public/js").vue().sourceMaps();
+mix.js("resources/js/app.js", "public/build/js").vue().sourceMaps();
 
-mix.postCss('resources/css/tailwind.css', 'public/css', [
+mix.postCss('resources/css/tailwind.css', 'public/build/css', [
     require('postcss-import'),
     require('tailwindcss'),
     require('postcss-nested'),
