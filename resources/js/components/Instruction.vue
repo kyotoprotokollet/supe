@@ -1,5 +1,5 @@
 <template>
-    <div class="bajs">
+    <div class="my-12">
         <slot></slot>
     </div>
 </template>
