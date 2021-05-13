@@ -3,8 +3,9 @@ module.exports = {
         content: [
             "./resources/**/*.antlers.html",
             "./resources/**/*.blade.php",
-            "./content/**/*.md"
-        ]
+            "./resources/js/**/*.{js,jsx,ts,tsx,vue}",
+            "./content/**/*.md",
+        ],
     },
     important: false,
     theme: {
@@ -18,14 +19,14 @@ module.exports = {
                 "Segoe UI",
                 "Roboto",
                 "Helvetica Neue",
-                "Arial"
+                "Arial",
             ],
-            serif: ["Lora", "Georgia", "sans-serif"]
-        }
+            serif: ["Lora", "Georgia", "sans-serif"],
+        },
     },
     variants: {},
     plugins: [
         require("@tailwindcss/typography"),
-        require("@tailwindcss/aspect-ratio")
-    ]
+        require("@tailwindcss/aspect-ratio"),
+    ],
 };
