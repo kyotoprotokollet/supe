@@ -17,7 +17,6 @@
             {{ /if }}
             {{ if recipe_main_image }}
                 <img src="{{ glide src="{recipe_main_image}" width="800" height="300" }}" class="my-6 rounded-lg shadow-lg">
-
             {{ /if }}
         </header>
 
@@ -32,7 +31,9 @@
                     {{ /if }}
 
                     {{ if type == "instruction_entry" }}
-                        <instruction :instruction='{{ instruction | to_json | sanitize }}'></instruction>
+                        <instruction>
+                            {{ instruction }}
+                        </instruction>
                     {{ /if }}
 
                 {{ /bard_field }}

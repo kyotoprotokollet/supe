@@ -3,27 +3,8 @@ fields:
   -
     handle: instruction
     field:
-      always_show_set_button: false
-      buttons:
-        - bold
-        - italic
-        - unorderedlist
-        - orderedlist
-        - removeformat
-        - quote
-        - anchor
-        - image
-      save_html: false
-      toolbar_mode: fixed
-      link_noopener: false
-      link_noreferrer: false
-      target_blank: false
-      reading_time: false
-      fullscreen: false
-      allow_source: true
-      enable_input_rules: true
-      enable_paste_rules: true
+      antlers: false
       display: Instruktion
-      type: bard
-      icon: bard
+      type: textarea
+      icon: textarea
       listable: hidden

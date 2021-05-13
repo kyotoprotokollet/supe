@@ -1,15 +1,14 @@
 <template>
-    {{ instruction }}
+    <div class="bajs">
+        <slot></slot>
+    </div>
 </template>
 
 <script>
 import { onMounted } from 'vue'
 
 export default {
-    props: ['instruction'],
-
     setup (props) {
-        onMounted(() => console.log(props.instruction))
 
         return {
         }
