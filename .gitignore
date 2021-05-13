@@ -2,7 +2,6 @@
 /public/hot
 /public/storage
 /public/build
-/public/mix-manifest.json
 /public/vendor/statamic
 /storage/*.key
 /vendor

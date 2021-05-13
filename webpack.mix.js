@@ -9,10 +9,7 @@ const mix = require('laravel-mix')
  | file for the application as well as bundling up all the JS files.
  |
  */
-/* mix.browserSync({
-    proxy: process.env.APP_URL,
-    notify: false
-}) */
+mix.setPublicPath("public/build");
 
 mix.js("resources/js/app.js", "public/build/js").vue().sourceMaps();
 
