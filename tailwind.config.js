@@ -24,6 +24,13 @@ module.exports = {
             ],
             serif: ["Lora", "Georgia", "sans-serif"],
         },
+        fontSize: {
+            "5xl": ["3rem", { lineHeight: "1.15" }],
+            "6xl": ["3.75rem", { lineHeight: "1.15" }],
+            "7xl": ["4.5rem", { lineHeight: "1.15" }],
+            "8xl": ["6rem", { lineHeight: "1.15" }],
+            "9xl": ["8rem", { lineHeight: "1.15" }],
+        },
     },
     variants: {},
     plugins: [
