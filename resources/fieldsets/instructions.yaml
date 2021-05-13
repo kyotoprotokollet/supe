@@ -3,8 +3,13 @@ fields:
   -
     handle: instruction
     field:
-      antlers: false
-      display: Instruktion
-      type: textarea
-      icon: textarea
+      restrict: false
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      smartypants: true
+      antlers: true
+      display: Instruktionssteg
+      type: markdown
+      icon: markdown
       listable: hidden
