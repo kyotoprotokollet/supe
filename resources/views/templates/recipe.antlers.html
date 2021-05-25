@@ -16,24 +16,21 @@
                 </div>
             {{ /if }}
             {{ if recipe_main_image }}
-                <img src="{{ glide src="{recipe_main_image}" width="800" height="300" }}" class="my-6 rounded-lg shadow-lg">
+                <img src="{{ glide src="{recipe_main_image}" width="800" height="300" }}" width="800" height="300" class="my-6 rounded-lg shadow-lg">
             {{ /if }}
         </header>
 
         <div class="grid grid-cols-5 gap-12">
-            <div class="col-span-3">
+            <div class="col-span-3 prose">
                 {{ bard_field }}
 
                     {{ if type == "text" }}
-                        <div class="prose">
-                            {{ text }}
-                        </div>
+                        {{ text }}
                     {{ /if }}
 
                     {{ if type == "instruction_entry" }}
-                        <instruction class="block my-6">
-                            {{ instruction }}
-                        </instruction>
+                        {{ increment from="1" }}
+                        {{ instruction }}
                     {{ /if }}
 
                 {{ /bard_field }}
