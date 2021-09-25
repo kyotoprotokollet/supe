@@ -32,9 +32,3 @@ fields:
       icon: bard
       instructions: 'Skapa ditt innehåll'
       listable: hidden
-      sets:
-        instruction_entry:
-          display: 'Ny instruktion'
-          fields:
-            -
-              import: instructions
