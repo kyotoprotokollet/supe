@@ -28,6 +28,7 @@ sections:
           listable: hidden
       -
         import: bard
+        prefix: recipe_
   sidebar:
     display: Sidebar
     fields:
@@ -35,7 +36,6 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
           validate:
             - required

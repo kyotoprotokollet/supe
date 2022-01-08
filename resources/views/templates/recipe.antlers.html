@@ -22,54 +22,43 @@
 
         <div class="grid grid-cols-5 gap-12">
             <div class="col-span-3 prose">
-                {{ bard_field }}
-
-                    {{ if type == "text" }}
-                        {{ text }}
-                    {{ /if }}
-
-                    {{ if type == "instruction_entry" }}
-                        {{ increment from="1" }}
-                        {{ instruction }}
-                    {{ /if }}
-
-                {{ /bard_field }}
+                {{ recipe_bard_field }}
+                    {{ partial src="sets/{type}" }}
+              {{ /recipe_bard_field }}
             </div>
 
             {{ if ingredients_list }}
                 <div class="col-span-2 p-6 rounded bg-gray-100 font-sans">
-                    <ingredients :ingredients='{{ ingredients_list | to_json | sanitize }}'>
-                        <div class="space-y-4">
-                            <div>
-                                <h3 class="text-2xl font-semibold">Ingredienser</h3>
-                            </div>
-                            <ul class="space-y-1">
-                            {{ ingredients_list }}
-                                <li>
-                                    {{ if type == "ingredient_headline" }}
-                                        <h4 class="mt-4 text-lg font-semibold">
-                                            {{ ingredient_headline }}
-                                        </h4>
-                                    {{ elseif type == "ingredient_item" }}
-                                    <div class="flex">
-                                        <div class="w-24">
-                                            {{ if amount }}
-                                                <span>{{ amount }}</span>
-                                            {{ /if }}
-                                            {{ if unit }}
-                                                <span>{{ unit }} </span>
-                                            {{ /if }}
-                                        </div>
-                                        <div class="pl-4">
-                                            {{ ingredient }}
-                                        </div>
-                                    </div>
-                                    {{ /if }}
-                                </li>
-                            {{ /ingredients_list }}
-                            </ul>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold">Ingredienser</h3>
                         </div>
-                    </ingredients>
+                        <ul class="space-y-1">
+                        {{ ingredients_list }}
+                            <li>
+                                {{ if type == "ingredient_headline" }}
+                                    <h4 class="mt-4 text-lg font-semibold">
+                                        {{ ingredient_headline }}
+                                    </h4>
+                                {{ elseif type == "ingredient_item" }}
+                                <div class="flex">
+                                    <div class="w-24">
+                                        {{ if amount }}
+                                            <span>{{ amount }}</span>
+                                        {{ /if }}
+                                        {{ if unit }}
+                                            <span>{{ unit }} </span>
+                                        {{ /if }}
+                                    </div>
+                                    <div class="pl-4">
+                                        {{ ingredient }}
+                                    </div>
+                                </div>
+                                {{ /if }}
+                            </li>
+                        {{ /ingredients_list }}
+                        </ul>
+                    </div>
                 </div>
             {{ /if }}
         </div>

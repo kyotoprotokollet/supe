@@ -32,3 +32,24 @@ fields:
       icon: bard
       instructions: 'Skapa ditt innehåll'
       listable: hidden
+      instructions_position: above
+      sets:
+        image:
+          display: 'Ny bild'
+          fields:
+            -
+              handle: image
+              field:
+                mode: list
+                container: assets
+                restrict: true
+                allow_uploads: true
+                show_filename: true
+                display: Bild
+                type: assets
+                icon: assets
+                instructions: Bild
+                listable: hidden
+                instructions_position: above
+                max_files: 1
+      antlers: false
