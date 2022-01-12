@@ -1,4 +1,22 @@
 const mix = require('laravel-mix')
+
+mix.webpackConfig({
+    stats: {
+        hash: true,
+        version: true,
+        timings: true,
+        children: true,
+        errors: true,
+        errorDetails: true,
+        warnings: true,
+        chunks: true,
+        modules: false,
+        reasons: true,
+        source: true,
+        publicPath: true,
+    }
+});
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,12 +29,14 @@ const mix = require('laravel-mix')
  */
 mix.setPublicPath("public/build");
 
-mix.js("resources/js/app.js", "public/build/js").vue().sourceMaps();
+mix.js("resources/js/app.js", "public/build/js")
+    .vue()
+    .sourceMaps();
 
 mix.postCss('resources/css/tailwind.css', 'public/build/css', [
     require('postcss-import'),
+    require('tailwindcss/nesting'),
     require('tailwindcss'),
-    require('postcss-nested'),
     require('postcss-preset-env')({stage: 0})
 ])
 

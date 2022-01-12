@@ -1,11 +1,11 @@
-/* This is all you. */
+@layer components {
+    .prose {
+        > * + * {
+            margin-top: 1em;
+        }
 
-.prose {
-    > * + * {
-        margin-top: 1em;
-    }
-
-    h2 {
-        @apply text-2xl;
+        h2 {
+            @apply text-2xl;
+        }
     }
 }

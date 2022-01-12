@@ -1,13 +1,10 @@
 module.exports = {
-    mode: "jit",
-    purge: {
-        content: [
-            "./resources/**/*.antlers.html",
-            "./resources/**/*.blade.php",
-            "./resources/js/**/*.{js,jsx,ts,tsx,vue}",
-            "./content/**/*.md",
-        ],
-    },
+    content: [
+        "./resources/**/*.antlers.html",
+        "./resources/**/*.blade.php",
+        "./resources/js/**/*.{js,vue}",
+        "./content/**/*.md",
+    ],
     important: false,
     theme: {
         extend: {},
@@ -40,8 +37,5 @@ module.exports = {
             "9xl": ["8rem", { lineHeight: "1.15" }],
         },
     },
-    variants: {},
-    plugins: [
-        require('@tailwindcss/forms'),
-    ],
+    plugins: [],
 };
